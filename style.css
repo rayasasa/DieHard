@@ -1,0 +1,37 @@
+.jugBottom{
+    background-color:white ;
+    padding: 10px ;
+    border: 2px solid black ;
+    border-top:0px;
+    border-top-color:white;
+    width:250px;
+}
+.jugRegular{
+    background-color:white ;
+    padding: 10px ;
+    border: 2px solid black ;
+    border-top-color: white;
+    border-top:0px;
+    border-bottom-color:white;
+    width:250px;
+}
+.header{
+    background-color: #ffc0cb14;
+    text-align:center;
+}
+.desc{
+    padding:20px;
+    margin:20px;
+}
+.row{
+    margin-left:10px;
+}
+button{
+    border-radius:5px;
+    margin: 10px;
+    background-color:lightgray;
+}
+.cur{
+    font-size:x-large;
+    text-align: left;
+}

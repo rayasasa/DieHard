@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel = "stylesheet" src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+        <link rel = "stylesheet" src = "style.css"/>
+        <script src = "main.js"></script>
+    </head>
+    <body ng-app = "dieHardApp" ng-controller = "dieHardCtrl">
+        <div class = "contianers">
+            <div class = "header"><h3>Die Hard Problem</h3></div>
+            <div class = "desc">
+                <p>You have two jugs with capacities 3 and 5 and unlimited supply of water. You can either empty, transfer or fill the jugs. </p>
+                <p>You need to have 4 gallons of water in one of the jugs in order to diffuse a bomb which will be going off in 5 minutes.</p>
+            </div>
+        </div>
+        <div class = "containers">
+            <div class = "row">
+                <!--<button ng-click = run_timer()>Start Timer</button>-->
+                <button ng-click = "runSolution()">See Solution</button>
+            </div>
+            <div class = "row" ng-show = "showSolution == 1">
+                <ul>
+                    <li>First Fill Big Jug</li>
+                    <li>Transfer to Small Jug</li>
+                    <li>Empty Small Jug</li>
+                    <li>Transfer Big Jug contents to Small Jug</li>
+                    <li>Fill Big Jug</li>
+                    <li>Transfer Big Jug to small Jug</li>
+                </ul>
+            </div>
+            <div class = "row"><h3>{{message}}</h3></div>
+            <div class = "row">
+                <div class = col-sm>
+                    <div id = "bj_1" class = "jugRegular"></div>
+                    <div id = "bj_2" class = "jugRegular"></div>
+                    <div id = "bj_3" class = "jugRegular"></div>
+                    <div id = "bj_4" class = "jugRegular"></div>
+                    <div id = "bj_5" class = "jugBottom"></div>
+                    <div class = "cur"> Current Quantity : {{bigJugCur}}</div>
+                    </br>
+                </div>
+                <div class = "col-sm" style = "padding-top:38">
+                    <div id = "sj_1" class = "jugRegular"></div>
+                    <div id = "sj_2" class = "jugRegular"></div>
+                    <div id = "sj_3" class = "jugBottom"></div>
+                    <div class = "cur"> Current Quantity: {{smallJugCur}}</div>
+                    </br>
+                </div>
+            </div>
+                <div class = row>
+                    <div class = "col-sm">
+                            <button ng-click = "fillBigJug(5)">Fill Jug</button>
+                            <button ng-click = "transferToSmall()">Transfer</button>
+                            <button ng-click = "emptyBigJug()">Empty</button>
+                    </div>
+                    <div class = "col-sm">
+                            <button ng-click="fillSmallJug(3)">Fill Jug</button>
+                            <button ng-click="transferToBig()">Transfer</button>
+                            <button ng-click = "emptySmallJug()">Empty</button>
+                    </div>
+                </div>  
+            
+        </div>    
+    </body>
+</html>
